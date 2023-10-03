@@ -1,7 +1,9 @@
 mod data;
 
-fn main(){
-    pub struct units::electric_charge::abcoulomb;
-    let battery= data::battery_info{};
+fn main() {
+    
+    let battery_status= data::BatteryInfo::new();
+    battery_status.print_info();
+    
     
 }

@@ -7,6 +7,7 @@ name = "Prophesy"
 version = "0.1.0"
 dependencies = [
  "battery",
+ "uom 0.35.0",
 ]
 
 [[package]]
@@ -28,7 +29,7 @@ dependencies = [
  "mach",
  "nix",
  "num-traits",
- "uom",
+ "uom 0.30.0",
  "winapi",
 ]
 
@@ -122,6 +123,16 @@ name = "uom"
 version = "0.30.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e76503e636584f1e10b9b3b9498538279561adcef5412927ba00c2b32c4ce5ed"
+dependencies = [
+ "num-traits",
+ "typenum",
+]
+
+[[package]]
+name = "uom"
+version = "0.35.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8362194c7a9845a7a7f3562173d6e1da3f24f7132018cb78fe77a5b4474187b2"
 dependencies = [
  "num-traits",
  "typenum",
