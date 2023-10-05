@@ -3,14 +3,6 @@
 version = 3
 
 [[package]]
-name = "Prophesy"
-version = "0.1.0"
-dependencies = [
- "battery",
- "uom 0.35.0",
-]
-
-[[package]]
 name = "autocfg"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -110,6 +102,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f30b0abd723be7e2ffca1272140fac1a2f084c77ec3e123c192b66af1ee9e6c2"
 dependencies = [
  "autocfg",
+]
+
+[[package]]
+name = "prophesy"
+version = "0.1.0"
+dependencies = [
+ "battery",
+ "uom 0.35.0",
 ]
 
 [[package]]
