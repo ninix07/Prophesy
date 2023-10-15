@@ -92,5 +92,25 @@ impl BatteryInfo
       println!("Time to Empty: {:?}", self.time_to_empty);
       println!("Time to Full: {:?}", self.time_to_full);
       }
+      pub fn update_info(&mut self){
+         let manager = battery::Manager::new().unwrap();
+
+         for (_idx, maybe_battery) in manager.batteries().unwrap().enumerate() {
+            let battery=maybe_battery.unwrap();
+            self.cycle_count=battery.cycle_count();
+            self.state=battery.state();
+            self.state_of_charge= battery.state_of_charge();
+            self.state_of_health=battery.state_of_health();
+            self.energy= battery.energy();
+            self.energy_full= battery.energy_full();
+            self.energy_full_design=battery.energy_full_design();
+            self.energy_rate=battery.energy_rate();
+            self.voltage=battery.voltage();
+            self.temperature=battery.temperature();
+            self.time_to_empty=battery.time_to_empty();
+            self.time_to_full=battery.time_to_full();
+        
+       };
+      }
 }
 
